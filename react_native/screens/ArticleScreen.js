@@ -1,15 +1,20 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, SafeAreaView } from "react-native";
 import { WebView } from "react-native-webview";
 import { useDispatch, useSelector } from "react-redux";
 import { addClip, deleteClip } from "../store/actions/user";
 import ClipButton from "../components/ClipButton";
 import Loading from "../components/Loading";
+import ShareButton from "../components/ShareButton";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+  },
+  buttonGroup: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
 
@@ -34,7 +39,10 @@ export default function ArticleScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ClipButton onPress={toggleClip} enabled={isClipped()} />
+      <View style={styles.buttonGroup}>
+        <ClipButton onPress={toggleClip} enabled={isClipped()} />
+        <ShareButton url={article.url} />
+      </View>
       <WebView
         style={styles.container}
         source={{ uri: article.url }}

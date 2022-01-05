@@ -12,7 +12,7 @@ import Constants from "expo-constants";
 import axios from "axios";
 import Loading from "../components/Loading";
 
-const URL = `https://newsapi.org/v2/everything?q=&apiKey=${Constants.manifest.extra.newsApiKey}`;
+const URL = `https://newsapi.org/v2/everything?q=フットサル&apiKey=${Constants.manifest.extra.newsApiKey}`;
 
 const styles = StyleSheet.create({
   container: {
