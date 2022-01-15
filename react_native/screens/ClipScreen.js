@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { StyleSheet, SafeAreaView, Text, FlatList } from "react-native";
 import ListItem from "../components/ListItem";
+import MyAdmob from "../components/MyAdmob";
 
 const styles = StyleSheet.create({
   container: {
@@ -15,6 +16,7 @@ export default ClipScreen = ({ navigation }) => {
   const { clips } = user;
   return (
     <SafeAreaView style={styles.container}>
+      <MyAdmob bannerSize="smartBannerLandscape" />
       <FlatList
         data={clips}
         renderItem={({ item }) => (

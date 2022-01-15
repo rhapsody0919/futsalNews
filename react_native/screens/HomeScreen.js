@@ -11,6 +11,7 @@ import ListItem from "../components/ListItem";
 import Constants from "expo-constants";
 import axios from "axios";
 import Loading from "../components/Loading";
+import AdMobInterstitial from "../components/AdMobInterstitial";
 
 const URL = `https://newsapi.org/v2/everything?q=フットサル&apiKey=${Constants.manifest.extra.newsApiKey}`;
 
@@ -69,6 +70,7 @@ export default HomeScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView styles={styles.container}>
+      {/* <AdMobInterstitial></AdMobInterstitial> */}
       <FlatList
         data={articles}
         renderItem={({ item }) => (
