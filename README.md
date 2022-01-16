@@ -22,8 +22,11 @@ This is an app where people can filiter out the news which you are interested in
 
 1. Start the containers
     ```
-    docker-compose up
-    ```
+   docker-compose run -p 19000:19000 -p 19001:19001 -p 19002:19002 --rm react_native bash --login
+   ```
+1. `yarn`
+
+1. `expo start`
 
 1. Read the QR code with your device
 
