@@ -6,7 +6,7 @@ This is an app where people can filiter out the news which you are interested in
 
 1. Clone this repository
     ```
-    git clone https://github.com/tinaba96/fnewsgit
+    git clone https://github.com/rhapsody0919/futsalNews.git
     ```
 
 1. Set your own `.env` file
